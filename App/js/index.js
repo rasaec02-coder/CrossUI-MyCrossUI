@@ -19,7 +19,42 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Input")
+                .setHost(host,"xui_ui_input5")
+                .setLeft("17.523809523809526em")
+                .setTop("16.761904761904763em")
+                .setWidth("21.02857142857143em")
+                .setLabelSize("8em")
+                .setLabelCaption("Password")
+                .setType("password")
+            );
+            
+            append(
+                xui.create("xui.UI.Group")
+                .setHost(host,"xui_ui_group1")
+                .setLeft("13.714285714285714em")
+                .setTop("8.380952380952381em")
+                .setWidth("28.64761904761905em")
+                .setHeight("12.266666666666667em")
+                .setZIndex(0)
+                .setCaption("Log-in")
+                .setToggleBtn(false)
+            );
+            
+            host.xui_ui_group1.append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput4")
+                .setLeft("3.7333333333333334em")
+                .setTop("2.9714285714285715em")
+                .setWidth("20.8em")
+                .setHeight("2.1333333333333333em")
+                .setLabelSize("8em")
+                .setLabelCaption("Username")
+                .setType("none")
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
